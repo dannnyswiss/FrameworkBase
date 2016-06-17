@@ -83,5 +83,26 @@ namespace Base.Test
                     .FirstOrDefault());
             }
         }
+
+        [TestMethod]
+        public void CanPassFromCustomerServiceToSalesAndAddAnOrder()
+        {
+            Customer customer;
+            int orderCount;
+            using (var context = new CustomerServiceContext()) { customer = context.Customers.FirstOrDefault(); }
+            using (var context = new SalesContext())
+            {
+                //context.Customers.Attach(customer); 
+                orderCount = context.Orders.Where(o => o.CustomerId == customer.Id).Count();
+                //var newOrder = new Order { OrderDate = DateTime.Now, DueDate = DateTime.Now.AddDays(7), ModifiedDate = DateTime.Now };
+                //newOrder.LineItems.Add(new LineItem { OrderQty = 1, ProductId = 6, UnitPrice = 200 });
+                //customer.Orders.Add(newOrder);
+                //context.SaveChanges();
+            }
+            using (var context = new SalesContext())
+            {
+                Assert.IsTrue(orderCount + 1 == context.Orders.Where(o => o.CustomerId == customer.Id).Count());
+            }
+        }
     }
 }
