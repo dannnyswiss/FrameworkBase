@@ -1,12 +1,6 @@
-﻿using System;
-using System.Data;
-using System.Data.Entity;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Base.Classes;
+﻿using Base.Classes;
 using Base.DataMappings;
+using System.Data.Entity;
 
 namespace Base.Data
 {
@@ -23,7 +17,7 @@ namespace Base.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new LineItemMap());
-           // modelBuilder.Entity<LineItem>().Ignore(c => c.LineTotal);
+            // modelBuilder.Entity<LineItem>().Ignore(c => c.LineTotal);
         }
     }
 }

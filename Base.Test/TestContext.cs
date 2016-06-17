@@ -1,15 +1,13 @@
 ﻿using Base.Classes;
+using Base.CustomerServiceBoundedContext;
 using Base.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Base.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Diagnostics;
-using System.Data.Entity.Infrastructure;
+using System;
 using System.Data.Entity.Core.Metadata.Edm;
-using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Diagnostics;
+using System.Linq;
 
 namespace Base.Test
 {
@@ -19,7 +17,7 @@ namespace Base.Test
 
         public TestContext()
         {
-            //HibernatingRinos.profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize;
+
         }
 
         [TestMethod]
@@ -120,6 +118,21 @@ namespace Base.Test
             using (var context = new SalesContext())
             {
                 Assert.IsTrue(orderCount + 1 == context.Orders.Where(o => o.CustomerId == customer.Id).Count());
+            }
+        }
+
+        [TestMethod]
+        public void CheckHowToUseUnitOfWork()
+        {
+            using (var repo = new CustomerRepository(new UnitOfWorkCustomerService()))
+            {
+                var i = 1;
+                foreach (var customer in repo.AllIncluding(c => c.Orders).Where(c => c.Orders.Any()).ToList())
+                {
+                    Console.WriteLine("{0}, {1} ( {2} ) Order Count = {3}", customer.FirstName, customer.LastName, i, customer.Orders.Count);
+                    i += 1;
+                }
+
             }
         }
     }

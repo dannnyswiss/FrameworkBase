@@ -67,6 +67,14 @@
       <Project>{627741D0-20AA-41DF-8EA3-168F84FBAF30}</Project>
       <Name>Base.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Base.Interfaces\Base.Interfaces.csproj">
+      <Project>{3652758d-17fa-43b9-86cf-88dade9c67e1}</Project>
+      <Name>Base.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base.Repositories\Base.Repositories.csproj">
+      <Project>{600E23BC-5AE3-4E7B-847B-64E1EAF35A9C}</Project>
+      <Name>Base.Repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Base.ReturnsBoundedContext\Base.BoundedContextReturns.csproj">
       <Project>{39b2dcca-c4e6-4a41-b5a2-f98c6f002fe2}</Project>
       <Name>Base.BoundedContextReturns</Name>
