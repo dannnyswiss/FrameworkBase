@@ -1,4 +1,5 @@
-﻿using Base.Data;
+﻿
+using Base.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,6 @@ namespace Base.Web.Controllers
 {
     public class HomeController : Controller
     {
-
-        private readonly ISpecificObjectRepository objectRepository;
-
-        public HomeController() : this(new SpecificObjectRepository())
-        {
-
-
-        }
-
-        public HomeController(ISpecificObjectRepository objectRepository)
-        {
-            this.objectRepository = objectRepository;
-        }
 
         public ActionResult Index()
         {
