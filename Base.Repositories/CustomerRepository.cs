@@ -80,11 +80,6 @@ namespace Base.Repositories
             _context.Customers.Remove(customer);
         }
 
-        public void Save()
-        {
-            _context.SaveChanges();
-        }
-
         public void Dispose()
         {
             _context.Dispose();

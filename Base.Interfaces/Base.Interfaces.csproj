@@ -49,9 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repository\GenericEntityRepository\IEntityRepository.cs" />
-    <Compile Include="Repository\ICustomerRepository.cs" />
-    <Compile Include="Repository\IOrderRepository.cs" />
+    <Compile Include="GenericInterface\IEntityRepository.cs" />
+    <Compile Include="ICustomerRepository.cs" />
+    <Compile Include="IOrderRepository.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

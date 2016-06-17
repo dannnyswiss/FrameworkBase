@@ -73,11 +73,6 @@ namespace Base.Repositories
             context.Orders.Remove(order);
         }
 
-        public void Save()
-        {
-            context.SaveChanges();
-        }
-
         public void Dispose()
         {
             context.Dispose();

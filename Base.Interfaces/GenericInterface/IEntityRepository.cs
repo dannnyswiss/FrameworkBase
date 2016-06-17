@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Base.Interfaces
+namespace Base.Interfaces.GenericInterface
 {
     public interface IEntityRepository<T> : IDisposable 
     {
@@ -14,6 +14,6 @@ namespace Base.Interfaces
         void InsertGraph(T entity); 
         void InsertOrUpdateEntity(T entity);
         void Delete(int id);
-        void Save();
+        //void Save();
     }
 }
