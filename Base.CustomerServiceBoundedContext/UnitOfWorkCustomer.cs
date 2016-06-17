@@ -1,17 +1,17 @@
 ﻿using Base.Data;
 
-namespace Base.SalesBoundedContext
+namespace Base.BoundedContextCustomers
 {
-    public class UnitOfWorkSales : IUnitOfWork<SalesContext>
+    public class UnitOfWorkCustomer : IUnitOfWork<CustomerContext>
     {
-        private readonly SalesContext _context;
+        private readonly CustomerContext _context;
 
-        public UnitOfWorkSales()
+        public UnitOfWorkCustomer()
         {
-            _context = new SalesContext();
+            _context = new CustomerContext();
         }
 
-        public UnitOfWorkSales(SalesContext context)
+        public UnitOfWorkCustomer(CustomerContext context)
         {
             _context = context;
         }
@@ -21,7 +21,7 @@ namespace Base.SalesBoundedContext
             return _context.SaveChanges();
         }
 
-        public SalesContext Context
+        public CustomerContext Context
         {
             get
             {

@@ -49,9 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -62,17 +61,17 @@
       <Project>{76c55456-31a3-4932-ae3c-6880909f2045}</Project>
       <Name>Base.Classes</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Base.CustomerServiceBoundedContext\Base.BoundedContextCustomerService.csproj">
-      <Project>{3B8ABEAC-F21A-4646-AB70-ED55EC50EFB1}</Project>
-      <Name>Base.BoundedContextCustomerService</Name>
+    <ProjectReference Include="..\Base.CustomerServiceBoundedContext\Base.BoundedContextCustomers.csproj">
+      <Project>{3b8abeac-f21a-4646-ab70-ed55ec50efb1}</Project>
+      <Name>Base.BoundedContextCustomers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Base.Data\Base.Data.csproj">
       <Project>{627741d0-20aa-41df-8ea3-168f84fbaf30}</Project>
       <Name>Base.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Base.Interfaces\Base.Interfaces.csproj">
-      <Project>{3652758d-17fa-43b9-86cf-88dade9c67e1}</Project>
-      <Name>Base.Interfaces</Name>
+    <ProjectReference Include="..\Base.ReturnsBoundedContext\Base.BoundedContextReturns.csproj">
+      <Project>{39b2dcca-c4e6-4a41-b5a2-f98c6f002fe2}</Project>
+      <Name>Base.BoundedContextReturns</Name>
     </ProjectReference>
     <ProjectReference Include="..\Base.SalesBoundedContext\Base.BoundedContextSales.csproj">
       <Project>{cd2f8fd1-bc90-450c-ab8b-fcd6065dd804}</Project>

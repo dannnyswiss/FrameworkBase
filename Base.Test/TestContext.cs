@@ -1,9 +1,7 @@
-﻿using Base.Classes;
-using Base.CustomerServiceBoundedContext;
+﻿using Base.BoundedContextCustomers;
+using Base.Classes;
 using Base.Data;
-using Base.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Entity.Infrastructure;
 using System.Diagnostics;
@@ -105,7 +103,7 @@ namespace Base.Test
         {
             Customer customer;
             int orderCount;
-            using (var context = new CustomerServiceContext()) { customer = context.Customers.FirstOrDefault(); }
+            using (var context = new CustomerContext()) { customer = context.Customers.FirstOrDefault(); }
             using (var context = new SalesContext())
             {
                 //context.Customers.Attach(customer); 
@@ -118,21 +116,6 @@ namespace Base.Test
             using (var context = new SalesContext())
             {
                 Assert.IsTrue(orderCount + 1 == context.Orders.Where(o => o.CustomerId == customer.Id).Count());
-            }
-        }
-
-        [TestMethod]
-        public void CheckHowToUseUnitOfWork()
-        {
-            using (var repo = new CustomerRepository(new UnitOfWorkCustomerService()))
-            {
-                var i = 1;
-                foreach (var customer in repo.AllIncluding(c => c.Orders).Where(c => c.Orders.Any()).ToList())
-                {
-                    Console.WriteLine("{0}, {1} ( {2} ) Order Count = {3}", customer.FirstName, customer.LastName, i, customer.Orders.Count);
-                    i += 1;
-                }
-
             }
         }
     }

@@ -52,6 +52,8 @@
     <Compile Include="BaseContext.cs" />
     <Compile Include="ContextHelpers.cs" />
     <Compile Include="DatabaseInitializationContext.cs" />
+    <Compile Include="IEntityRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

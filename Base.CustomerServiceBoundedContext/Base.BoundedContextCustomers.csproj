@@ -49,9 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerServiceContext.cs" />
+    <Compile Include="CustomerContext.cs" />
+    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="ICustomerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitOfWorkCustomerService.cs" />
+    <Compile Include="UnitOfWorkCustomer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Base.Classes\Base.Classes.csproj">
@@ -65,10 +67,6 @@
     <ProjectReference Include="..\Base.Data\Base.Data.csproj">
       <Project>{627741d0-20aa-41df-8ea3-168f84fbaf30}</Project>
       <Name>Base.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Base.Interfaces\Base.Interfaces.csproj">
-      <Project>{3652758d-17fa-43b9-86cf-88dade9c67e1}</Project>
-      <Name>Base.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

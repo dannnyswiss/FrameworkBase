@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Base.Interfaces.GenericInterface
+namespace Base.Data
 {
     public interface IEntityRepository<T> : IDisposable
     {

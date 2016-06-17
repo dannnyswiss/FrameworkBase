@@ -1,10 +1,11 @@
 ﻿using Base.Classes;
+using Base.Data;
 using Base.DataMappings;
 using System.Data.Entity;
 
-namespace Base.Data
+namespace Base.BoundedContextCustomers
 {
-    public class CustomerServiceContext : BaseContext<CustomerServiceContext>
+    public class CustomerContext : BaseContext<CustomerContext>
     {
         public DbSet<Customer> Customers { get; set; }
 

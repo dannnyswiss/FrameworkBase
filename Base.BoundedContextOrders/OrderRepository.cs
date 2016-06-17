@@ -1,19 +1,14 @@
 ﻿using Base.Classes;
-using Base.Data;
-using Base.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Base.Repositories
+namespace Base.BoundedContextOrders
 {
     public class OrderRepository : IOrderRepository
     {
-        SalesContext context = new SalesContext();
+        OrderContext context = new OrderContext();
         public IQueryable<Order> All
         {
             get

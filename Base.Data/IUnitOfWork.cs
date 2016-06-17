@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 
-namespace Base.Interfaces
+namespace Base.Data
 {
     public interface IUnitOfWork<TContext> : IDisposable where TContext : DbContext
     {

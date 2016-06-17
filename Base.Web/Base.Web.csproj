@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UnitOfWorkCustomerService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -286,13 +287,17 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Base.Interfaces\Base.Interfaces.csproj">
-      <Project>{3652758d-17fa-43b9-86cf-88dade9c67e1}</Project>
-      <Name>Base.Interfaces</Name>
+    <ProjectReference Include="..\Base.Classes\Base.Classes.csproj">
+      <Project>{76c55456-31a3-4932-ae3c-6880909f2045}</Project>
+      <Name>Base.Classes</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Base.Repositories\Base.Repositories.csproj">
-      <Project>{600e23bc-5ae3-4e7b-847b-64e1eaf35a9c}</Project>
-      <Name>Base.Repositories</Name>
+    <ProjectReference Include="..\Base.CustomerServiceBoundedContext\Base.BoundedContextCustomers.csproj">
+      <Project>{3b8abeac-f21a-4646-ab70-ed55ec50efb1}</Project>
+      <Name>Base.BoundedContextCustomers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base.Data\Base.Data.csproj">
+      <Project>{627741D0-20AA-41DF-8EA3-168F84FBAF30}</Project>
+      <Name>Base.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

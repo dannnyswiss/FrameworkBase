@@ -1,19 +1,17 @@
 ﻿using Base.Classes;
-using Base.CustomerServiceBoundedContext;
 using Base.Data;
-using Base.Interfaces;
 using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Base.Repositories
+namespace Base.BoundedContextCustomers
 {
     public class CustomerRepository : ICustomerRepository
     {
-        private CustomerServiceContext _context;
+        private CustomerContext _context;
 
-        public CustomerRepository(UnitOfWorkCustomerService uow)
+        public CustomerRepository(UnitOfWorkCustomer uow)
         {
             _context = uow.Context;
         }

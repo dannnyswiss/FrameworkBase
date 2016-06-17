@@ -1,7 +1,7 @@
 ﻿using Base.Classes;
-using Base.Interfaces.GenericInterface;
+using Base.Data;
 
-namespace Base.Interfaces
+namespace Base.BoundedContextOrders
 {
     public interface IOrderRepository : IEntityRepository<Order>
     {
