@@ -59,9 +59,21 @@
       <Project>{76C55456-31A3-4932-AE3C-6880909F2045}</Project>
       <Name>Base.Classes</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Base.CustomerServiceBoundedContext\Base.CustomerServiceBoundedContext.csproj">
+      <Project>{3b8abeac-f21a-4646-ab70-ed55ec50efb1}</Project>
+      <Name>Base.CustomerServiceBoundedContext</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Base.Data\Base.Data.csproj">
       <Project>{627741D0-20AA-41DF-8EA3-168F84FBAF30}</Project>
       <Name>Base.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base.ReturnsBoundedContext\Base.ReturnsBoundedContext.csproj">
+      <Project>{39b2dcca-c4e6-4a41-b5a2-f98c6f002fe2}</Project>
+      <Name>Base.ReturnsBoundedContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base.SalesBoundedContext\Base.SalesBoundedContext.csproj">
+      <Project>{cd2f8fd1-bc90-450c-ab8b-fcd6065dd804}</Project>
+      <Name>Base.SalesBoundedContext</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

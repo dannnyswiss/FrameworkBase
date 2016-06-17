@@ -1,7 +1,7 @@
 ﻿using Base.Classes;
 using System.Data.Entity.ModelConfiguration;
 
-namespace Base.Data
+namespace Base.DataMappings
 {
     public class LineItemMap : EntityTypeConfiguration<LineItem>
     {

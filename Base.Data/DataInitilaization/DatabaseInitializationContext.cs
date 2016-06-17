@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Base.Classes;
+using Base.DataMappings;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Base.Classes;
 
-namespace Base.Data.Contexts
+namespace Base.Data
 {
-    public class CodeFirstContext : DbContext
+    public class DatabaseInitializationContext : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
