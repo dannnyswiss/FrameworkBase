@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using Base.Classes;
 using Base.Interfaces;
 using Base.Data;
-using Base.UnitOfWork;
+using Base.CustomerServiceBoundedContext;
 
 namespace Base.Repositories
 {
@@ -46,19 +46,20 @@ namespace Base.Repositories
         {
             _context.Customers.Add(customer);
         }
-        //public void InsertOrUpdateGraph(Customer customerGraph)
-        //{
-        //    _context.Customers.Add(customerGraph);
-        //    if (customerGraph.State == ObjectState.State.Added)
-        //    {
-        //        _context.Customers.Add(customerGraph);
-        //    }
-        //    else
-        //    {
-        //        _context.Customers.Add(customerGraph);
-        //        _context.ApplyStateChanges();
-        //    }
-        //}
+
+        public void InsertOrUpdateGraph(Customer customerGraph)
+        {
+            _context.Customers.Add(customerGraph);
+            if (customerGraph.State == ObjectState.Add)
+            {
+                _context.Customers.Add(customerGraph);
+            }
+            else
+            {
+                _context.Customers.Add(customerGraph);
+                _context.ApplyStateChanges();
+            }
+        }
 
         public void InsertOrUpdateEntity(Customer customer)
         {

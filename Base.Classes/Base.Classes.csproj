@@ -53,7 +53,10 @@
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerReference.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="ObjectState.cs" />
     <Compile Include="LineItem.cs" />
+    <Compile Include="ClassObjectState\IObjectWithState.cs" />
+    <Compile Include="ClassObjectState\StateHelpers.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Person.cs" />

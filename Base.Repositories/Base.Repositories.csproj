@@ -62,9 +62,9 @@
       <Project>{76c55456-31a3-4932-ae3c-6880909f2045}</Project>
       <Name>Base.Classes</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Base.CustomerServiceBoundedContext\Base.CustomerServiceBoundedContext.csproj">
+    <ProjectReference Include="..\Base.CustomerServiceBoundedContext\Base.BoundedContextCustomerService.csproj">
       <Project>{3B8ABEAC-F21A-4646-AB70-ED55EC50EFB1}</Project>
-      <Name>Base.CustomerServiceBoundedContext</Name>
+      <Name>Base.BoundedContextCustomerService</Name>
     </ProjectReference>
     <ProjectReference Include="..\Base.Data\Base.Data.csproj">
       <Project>{627741d0-20aa-41df-8ea3-168f84fbaf30}</Project>
@@ -74,13 +74,9 @@
       <Project>{3652758d-17fa-43b9-86cf-88dade9c67e1}</Project>
       <Name>Base.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Base.SalesBoundedContext\Base.SalesBoundedContext.csproj">
+    <ProjectReference Include="..\Base.SalesBoundedContext\Base.BoundedContextSales.csproj">
       <Project>{cd2f8fd1-bc90-450c-ab8b-fcd6065dd804}</Project>
-      <Name>Base.SalesBoundedContext</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Base.UnitOfWork\Base.UnitOfWork.csproj">
-      <Project>{61af5159-7ee1-4b51-8210-b01ef98c3151}</Project>
-      <Name>Base.UnitOfWork</Name>
+      <Name>Base.BoundedContextSales</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,7 +1,7 @@
 ﻿using Base.Data;
 using Base.Interfaces;
 
-namespace Base.UnitOfWork
+namespace Base.CustomerServiceBoundedContext
 {
     public class UnitOfWorkCustomerService : IUnitOfWork<CustomerServiceContext>
     {

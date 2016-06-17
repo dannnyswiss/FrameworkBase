@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Base.Data;
 using Base.Interfaces;
 
-namespace Base.Data
+namespace Base.SalesBoundedContext
 {
     public class UnitOfWorkSales : IUnitOfWork<SalesContext>
     {

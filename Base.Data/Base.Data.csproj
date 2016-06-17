@@ -49,8 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseContexts\BaseContext.cs" />
-    <Compile Include="DataInitilaization\DatabaseInitializationContext.cs" />
+    <Compile Include="BaseContext.cs" />
+    <Compile Include="ContextHelpers.cs" />
+    <Compile Include="DatabaseInitializationContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

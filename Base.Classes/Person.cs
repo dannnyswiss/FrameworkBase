@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Base.Classes
 {
-    public abstract class Person
+    public abstract class Person : IObjectWithState
     {
         public int Id { get; set; }
         [StringLength(10)]
@@ -17,5 +18,7 @@ namespace Base.Classes
         public string EmailAddress { get; set; }
         [StringLength(25)]
         public string Phone { get; set; }
+        [NotMapped]
+        public ObjectState State { get; set; }
     }
 }
