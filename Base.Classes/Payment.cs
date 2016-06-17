@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Base.Classes
 {
-    class Payment
+    public class Payment
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Amount { get; set; }
     }
 }

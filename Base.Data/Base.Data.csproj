@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\BaseContext.cs" />
+    <Compile Include="Contexts\CodeFirstContext.cs" />
     <Compile Include="Contexts\CustomerServiceContext.cs" />
     <Compile Include="Interfaces\ISpecificObjectRepository.cs" />
     <Compile Include="Mappings\LineItemMap.cs" />

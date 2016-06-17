@@ -9,12 +9,31 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Entity;
+using Base.Data.Contexts;
 
 namespace Base.Test
 {
     [TestClass]
     public class TestContext
     {
+
+        public TestContext()
+        {
+            //HibernatingRinos.profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize;
+        }
+
+        [TestMethod]
+        public void CanCreateCodeFirstContext()
+        {
+            ////Don't run unless you are testing the first setup of code first
+            //Database.SetInitializer(new DropCreateDatabaseAlways<CodeFirstContext>());
+            //using (var context = new CodeFirstContext())
+            //{
+            //    Assert.AreEqual(0, context.Customers.Count());
+            //}
+        }
+
         [TestMethod]
         public void CanInsertObjectIntoDatabase()
         {
